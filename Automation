@@ -1,0 +1,33 @@
+# Library imports
+from vex import *
+
+
+# Begin project code
+# Function to run when bumper is pressed
+def spin_motor():
+
+
+   motor_group_1.spin(FORWARD)
+   wait(20, SECONDS)
+   motor_group_1.stop()
+
+
+   motor_9.spin(FORWARD)
+   wait(7, SECONDS)
+   motor_9.stop()
+   wait(7, SECONDS)
+   motor_9.spin(FORWARD)
+
+
+   motor_group_11.spin(FORWARD)
+   wait(20, SECONDS)
+   motor_group_11.stop()
+
+
+# Link the bumper press to the function
+bumper_a.pressed(spin_motor)
+
+
+# Keep program running
+while True:
+   wait(100, MSEC)
